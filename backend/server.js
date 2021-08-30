@@ -4,6 +4,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 const app = express();
 
+// middle ware
+app.use(express.json())
 
 mongoose.connect(process.env.DB_STRING,{
   useNewUrlParser: true,
